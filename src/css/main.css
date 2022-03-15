@@ -1,0 +1,302 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+
+    background-color: black;
+}
+
+/* NAVBAR */
+.show{
+    display: flex !important;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+nav ul li > a{
+    display: block;
+    position: relative;
+    padding: 20px 15px 10px 15px;
+    text-decoration: none;
+
+    color: white;
+}
+nav ul li .link::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+
+    background-color: white;
+}
+nav ul li .link:hover::before{
+    transform: scaleX(1);
+}
+nav .more{
+    display: none;
+}
+nav .menu{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    min-width: 200px;
+    background-color: white;
+}
+nav .menu a{
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+nav .menu a:hover{
+    background-color: black;
+    color: white;
+}
+nav .mobile{
+    display: none;
+    width: 100%;
+
+}
+nav .mobile .header{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+nav .mobile .header a{
+    display: inline-flex;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+nav .mobile .header #bmenu{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    
+    color: white;
+}
+nav .mobile .links{
+    display: none;
+    flex-direction: column;
+    position: relative;
+    z-index: 200;
+    background-color: white;
+    width: 200px;
+}
+nav .mobile .links a{
+    font-size: larger;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+
+    color: black;
+}
+nav .mobile .links a:hover{
+    font-size: larger;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+
+    color: white;
+    background-color: black;
+}
+
+/* HEADER */
+header{
+    background-image: url(../img/halo-infinite-cover-darkmode.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+/* BANNER */
+h1{
+    font-size: 3.3rem;
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+h1::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: -35px;
+    left: 0;
+
+    transform: scale(0.4) skewY(-20deg) rotate(20deg);
+
+    background-color: greenyellow;
+}
+#banner{
+    font-size: 1.8em;
+    text-align: center;
+    padding: 40px;
+    width: 500px;
+    position: absolute;
+    z-index: 100;
+    top: 200px;
+    right: 80px;
+
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.green-button{
+    text-transform: uppercase;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 10px 40px;
+    background-color: greenyellow;
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.green-button:hover{
+    background-color: rgb(138, 207, 33);
+}
+.green-link{
+    text-transform: uppercase;
+    position: relative;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px 40px;
+    color: greenyellow;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.green-link::before{
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    
+    background-color: greenyellow;
+}
+.green-link:hover::before{
+    transform: scaleX(0.7);
+}
+
+/* VIDEOS */
+.w-75{
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 35px;
+}
+h3{
+    font-size: 1.6em;
+    padding-top: 50px;
+    color: white;
+}
+#videos{
+    text-align: center;
+    padding: 50px 0;
+
+    background-image: url(../img/bg-videos.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: white;
+}
+#videos #slider #controls{
+    display: flex;
+    justify-content: center;
+
+}
+#videos #slider #controls .prev,
+#videos #slider #controls .next{
+    border: none;
+    height: 50px;
+    width: 80px;
+    background-color: rgb(58,58,58);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+#videos #slider #controls .prev:hover,
+#videos #slider #controls .next:hover{
+    background-color: rgb(37,37,37);
+}
+
+#videos #slider #current{
+    width: 1280px;
+    margin: 50px auto;
+    border: solid 1px #00c3ff;
+    
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 1190px){
+    nav .link-hide{
+        display: none;
+    }
+    nav .more{
+        display: block;
+    }
+    #banner{
+        position: initial !important;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 700px){
+    nav{
+        width: 100%;
+        padding: 0;
+    }
+    nav ul {
+        display: none;
+    }
+    nav .mobile {
+        display: block;
+    }
+    header{
+        height: 50vh;
+    }
+    #banner{
+        position: initial !important;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
