@@ -1,3 +1,3 @@
 #Web-Halo
 CREATED BY: marcosrivasr
-DEVELOPMENT BY: ArturHL
+DEVELOPED BY: ArturHL
