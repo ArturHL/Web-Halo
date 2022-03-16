@@ -259,7 +259,77 @@ h3{
     width: 1280px;
     margin: 50px auto;
     border: solid 1px #00c3ff;
-    
+
+}
+#videos #slider #videos-container{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    overflow: auto;
+    justify-content: center;
+}
+#videos #slider #videos-container .item{
+    border: solid 1px #00c3ff;
+    cursor: pointer;
+    overflow: hidden;
+
+    min-width: 320px;
+    height: 180px;
+
+}
+
+#videos #slider #videos-container .item a{
+    position: relative;
+}
+
+#videos #slider #videos-container .item img{
+    object-fit: contain;
+
+    min-width: 320px;
+    height: 180px;
+}
+
+#videos #slider #videos-container .item:hover img{
+    transition: opacity 0.3s ease;
+    opacity: 0.7;
+}
+
+#videos #slider #videos-container .item a::before{
+    font-family: "Material Icons";
+    font-size: 24px;
+    content: "play_arrow";
+    color: white;
+    position: absolute;
+    display: block;
+    left: 135px;
+    top: -95px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/* MULTIPLAYER */
+#multi-player{
+    height: 100vh;
+    background-image: url(../img/bg-multiplayer.jpeg);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.info{
+    line-height: 1.2;
+    padding: 40px;
+    width: 600px;
+    margin-right: 50px;
+}
+
+.info p{
+    font-size: large;
 }
 
 /* MEDIA QUERY */
@@ -274,11 +344,32 @@ h3{
         position: initial !important;
         width: 100%;
     }
+
+    #slider #current{
+        width: 90% !important;
+    }
+
+    #slider #videos-container {
+        display: none !important;
+    }
+
+    #slider #current iframe{
+        height: 500px;
+    }
+
+    .info{
+        width: 600px;
+        margin: 00 auto;
+    }
+
+    #multi-player{
+        background-position: center left;
+    }
 }
 @media screen and (max-width: 700px){
     nav{
         width: 100%;
-        padding: 0;
+        padding: 0;  
     }
     nav ul {
         display: none;
@@ -292,6 +383,33 @@ h3{
     #banner{
         position: initial !important;
         width: 100%;
+    }
+    #slider #current{
+        width: 90% !important;
+    }
+
+    #slider #videos-container {
+        display: none !important;
+    }
+
+    #slider #current iframe{
+        height: 300px;
+    }
+
+    .info{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #multi-player{
+        background-position: -400px 0;
+    }
+}
+
+@media screen and (max-width:1580px) {
+    .info{
+        background-color: rgba(0,0,0,0.8);
+        color: white;
     }
 }
 
