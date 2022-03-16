@@ -332,6 +332,57 @@ h3{
     font-size: large;
 }
 
+/* GET THE GAME */
+#get-the-game{
+    text-align: center;
+    padding: 50px 0;
+
+    color: white;
+}
+
+#get-the-game h1{
+    margin-bottom: 60px;
+}
+
+#get-the-game h2{
+    color: white;
+}
+
+#get-the-game h3{
+    padding: 0;
+    margin: 0;
+    font-size: 1.9rem;
+}
+
+#get-the-game .item-store{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+}
+
+#get-the-game .item-store .left{
+    padding: 0 20px;
+    width: 100%;
+}
+
+#get-the-game .item-store .left img{
+    width: 450px;
+}
+
+#get-the-game .item-store .right{
+    text-align: left;
+    padding:  0 50px;
+    width: 60%;
+}
+/* FOOTER */
+footer{
+    height: 600px;
+    background-image: url(../img/master-chief-darkmode.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 /* MEDIA QUERY */
 @media screen and (max-width: 1190px){
     nav .link-hide{
@@ -359,11 +410,32 @@ h3{
 
     .info{
         width: 600px;
-        margin: 00 auto;
+        margin: 0 auto;
+    }
+
+    #get-the-game .item-store{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #get-the-game .item-store .left img {
+        width: 300px;
+    }
+
+    #get-the-game .item-store .right{
+        text-align: center;
+        width: 100%;
     }
 
     #multi-player{
         background-position: center left;
+    }
+
+    footer{
+        height: 600px;
+        background-position: center;
     }
 }
 @media screen and (max-width: 700px){
